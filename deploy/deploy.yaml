@@ -16,6 +16,9 @@ parameters:
 - name: FRONTEND_PORT
   description: The port of the frontend service
   value: "8000"
+- name: SECRET_NAME
+  description: The name of the secret
+  value: firelink-proxy
 
 objects:
 - apiVersion: apps/v1
@@ -40,7 +43,7 @@ objects:
           - name: secret-firelink-proxy
             secret:
               defaultMode: 420
-              secretName: firelink-proxy
+              secretName: ${SECRET_NAME}
         containers:
         - name: firelink-proxy
           image: quay.io/rh_ee_addrew/firelink-proxy:latest
