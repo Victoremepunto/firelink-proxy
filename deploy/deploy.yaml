@@ -22,6 +22,9 @@ parameters:
 - name: IMAGE_TAG
   description: The image tag
   value: latest
+- name: IMAGE
+  description: The image
+  value: quay.io/rh_ee_addrew/firelink-proxy
 
 objects:
 - apiVersion: apps/v1
@@ -49,7 +52,7 @@ objects:
               secretName: ${SECRET_NAME}
         containers:
         - name: firelink-proxy
-          image: quay.io/rh_ee_addrew/firelink-proxy:${IMAGE_TAG}
+          image: ${IMAGE}:${IMAGE_TAG}
           ports:
           - containerPort: 8000
           env:
