@@ -1,7 +1,5 @@
 {
-    auto_https {
-        disable true
-    }
+    auto_https off
 }
 :8000 {
 
