@@ -89,7 +89,7 @@ objects:
               name: secret-firelink-proxy-tls
             - mountPath: /etc/proxy/secrets
               name: secret-firelink-proxy
-      serviceAccountName: firelink-proxy
+        serviceAccountName: firelink-proxy
 
 
 - apiVersion: v1
