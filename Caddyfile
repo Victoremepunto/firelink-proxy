@@ -1,5 +1,6 @@
 {
-    debug
+    https_port 8000
+    auto_https disable_redirects
 }
 :8000 {
 
