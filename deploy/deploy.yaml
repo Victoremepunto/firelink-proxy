@@ -25,6 +25,9 @@ parameters:
 - name: IMAGE
   description: The image
   value: quay.io/rh_ee_addrew/firelink-proxy
+- name: INGRESS_DOMAIN
+  description: The domain of the ingress
+  value: apps.ocp4.example.com
 
 objects:
 - apiVersion: apps/v1
