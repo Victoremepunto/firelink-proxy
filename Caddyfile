@@ -1,7 +1,7 @@
 {
     auto_https off
 }
-http://0.0.0.0:8000 {
+http://:8000 {
 
     reverse_proxy /api/firelink/socket.io/* {env.BACKEND_SERVICE}:{env.BACKEND_PORT} {
         header_up Connection {http.upgrade}
