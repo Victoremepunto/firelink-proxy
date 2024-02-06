@@ -130,6 +130,6 @@ objects:
     tls:
       termination: reencrypt
       insecureEdgeTerminationPolicy: Redirect
-    host: firelink.<Ingress_Domain>
+    host: firelink.${INGRESS_DOMAIN}
     port:
       targetPort: 8888
