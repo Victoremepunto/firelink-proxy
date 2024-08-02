@@ -123,6 +123,9 @@ objects:
   kind: Route
   metadata:
     name: firelink-proxy
+    annotations:
+      cert-manager.io/issuer-kind: ClusterIssuer
+      cert-manager.io/issuer-name: letsencrypt-prod-http
   spec:
     to:
       kind: Service
